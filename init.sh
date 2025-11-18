@@ -16,9 +16,7 @@ echo "en_US ISO-8859-1" >> /etc/locale.gen
 curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
 
 pacman -Syy --noconfirm &&
-pacman -S linux-zen\
-    scx-scheds \
-    wireless-regdb \
+pacman -S wireless-regdb \
     amd-ucode \
     mkinitcpio \
     base-devel \
@@ -152,7 +150,7 @@ systemctl enable waydroid-container.service
 ## BOOTUPS
 mkdir -p /boot/{efi,kernel,loader}
 mkdir -p /boot/efi/{boot,linux,systemd,rescue}
-mv /boot/vmlinuz-linux-zen /boot/amd-ucode.img /boot/kernel/
+mv /boot/vmlinuz-linux-lqx /boot/amd-ucode.img /boot/kernel/
 rm /etc/mkinitcpio.conf
 rm -fr /etc/mkinitcpio.conf.d/
 rm /boot/initramfs-*
