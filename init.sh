@@ -13,7 +13,7 @@ echo "en_US ISO-8859-1" >> /etc/locale.gen
 
 LVMDRIVER=""
 
-if [[ -z $(vgs) ]]; then
+if [[ ! -z $(vgs) ]]; then
     $LVMDRIVER="lvm2"
 fi
 
