@@ -94,8 +94,8 @@ mkdir -p /mnt/var/log/audit &&
 mount /dev/proc/vaud /mnt/var/log/audit &&
 
 
-mkdir -p /mnt/home/family &&
-mount /dev/data/repo /mnt/home/family &&
+mkdir -p /mnt/home/media &&
+mount /dev/data/repo /mnt/home/media &&
 
 pacstrap /mnt base &&
 
