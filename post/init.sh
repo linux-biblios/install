@@ -23,7 +23,16 @@ cp -fr /post/base/* / &&
 locale-gen &&
 
 
-## KERNEL
+##
+## BOOTUPS
+mkdir -p /boot/{efi,kernel,loader} &&
+mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
+mv /boot/*-ucode.img /boot/kernel/ &&
+rm /etc/mkinitcpio.conf &&
+rm -fr /etc/mkinitcpio.conf.d/ &&
+
+
+## KERNELS
 curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
 
 
@@ -89,20 +98,14 @@ systemctl enable systemd-timesyncd.service &&
 chmod +x /usr/xbin/* &&
 chmod +x /usr/rbin/* &&
 
-## CLEAR
+
+## CLEARED
 rm /usr/share/wayland-sessions/weston.desktop &&
 
-##
-## BOOTUPS
-mkdir -p /boot/{efi,kernel,loader} &&
-mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
-mv /boot/*-ucode.img /boot/kernel/ &&
-rm /etc/mkinitcpio.conf &&
-rm -fr /etc/mkinitcpio.conf.d/ &&
-bootctl --path=/boot install &&
 
-
+## BOOTING
 echo "root=$DISKPROC" > /etc/cmdline.d/01-boot.conf &&
+bootctl --path=/boot install &&
 mkinitcpio -P &&
 
 
