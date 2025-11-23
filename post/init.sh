@@ -1,9 +1,12 @@
 #!/bin/bash
 
+
 source /post/config
+
 
 #HOSTNAME
 echo "creami" > /etc/hostname &&
+
 
 ## LOCALTIME 
 ln -sf /usr/share/zoneinfo/$TIMEZONE /etc/localtime &&
@@ -11,12 +14,17 @@ hwclock --systohc &&
 timedatectl set-ntp true &&
 timedatectl set-timezone $TIMEZONE &&
 
+
 ## CONFIG
 cp -fr /post/base/* / &&
 
 
 ## LOCALE
 locale-gen &&
+
+
+## KERNEL
+curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
 
 
 # PROCESSOR
@@ -43,10 +51,6 @@ fi
 if [[ ! -z $(lspci | grep -i --color '3d\|AMD\|AMD/ATI\|RADEON') ]];then
     echo "graphic radeon"
 fi
-
-
-
-curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
 
 
 ## switch
