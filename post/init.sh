@@ -27,32 +27,6 @@ locale-gen &&
 curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
 
 
-# PROCESSOR
-procieidven=$(grep "vendor_id" /proc/cpuinfo | head -n 1 | awk '{print $3}')
-
-if [[ "$procieidven" == "GenuineIntel" ]]; then
-    pacman -S intel-ucode  --noconfirm
-elif [[ "$procieidven" == "AuthenticAMD" ]]; then
-    pacman -S amd-ucode  --noconfirm
-fi
-
-
-# GRAPHICAL
-graphidven=$(lspci | grep -i --color 'vga\')
-
-if [[ ! -z $(echo $graphidven | grep -i --color 'Intel Corporation') ]];then
-    echo "graphic intel"
-fi
-
-if [[ ! -z $(lspci | grep -i --color '3d\|NVIDIA') ]];then
-    echo "graphic nvidia"
-fi
-
-if [[ ! -z $(lspci | grep -i --color '3d\|AMD\|AMD/ATI\|RADEON') ]];then
-    echo "graphic radeon"
-fi
-
-
 ## switch
 wget -O /usr/pbin/switch.AppImage https://git.ryujinx.app/api/v4/projects/1/packages/generic/Ryubing/1.3.3/ryujinx-1.3.3-x64.AppImage &&
 chmod +x /usr/pbin/switch.AppImage && 
@@ -101,7 +75,7 @@ cd / &&
 
 ##
 ## SERVICE
-systemctl enable lightdm &&
+systemctl enable sddm &&
 systemctl enable dnsmasq &&
 systemctl enable sshd &&
 systemctl enable update.timer &&
@@ -113,8 +87,10 @@ systemctl enable systemd-timesyncd.service &&
 
 ## EXECUTE
 chmod +x /usr/xbin/* &&
-chmod +x /usr/pbin/* &&
+chmod +x /usr/rbin/* &&
 
+## CLEAR
+rm /usr/share/wayland-sessions/weston.desktop &&
 
 ##
 ## BOOTUPS
