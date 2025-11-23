@@ -26,8 +26,8 @@ mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
 mkdir -p /mnt/home &&
 mount $DISKDATA /mnt/home &&
 
-echo "[multilib]" >> /mnt/etc/pacman.conf &&
-echo "Include = /etc/pacman.d/mirrorlist" >> /mnt/etc/pacman.conf &&
+echo "[multilib]" >> /etc/pacman.conf &&
+echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf &&
 
 pacman -Syy &&
 
