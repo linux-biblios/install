@@ -29,8 +29,6 @@ mount $DISKDATA /mnt/home &&
 echo "[multilib]" >> /etc/pacman.conf &&
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf &&
 
-pacman -Syy &&
-
 pacstrap /mnt $DISTRO_INSTALLATION_PACKAGE &&
 
 genfstab -U /mnt > /mnt/etc/fstab &&
