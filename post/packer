@@ -38,6 +38,6 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     discover 
     fuse 
     btop 
-    gdm 
+    sddm
     firefox 
     aria2"
