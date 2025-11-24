@@ -12,7 +12,11 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     cosmic-icon-theme    
     cosmic-launcher
     cosmic-notifications
-    gnome-keyring
+    gnome-keyring 
+    gvfs
+    gvfs-nfs 
+    gvfs-smb 
+    gvfs-dnssd
     mkinitcpio 
     base-devel 
     mesa 
