@@ -34,7 +34,7 @@ rm -fr /etc/mkinitcpio.conf.d/ &&
 
 ##
 ## SERVICE
-systemctl enable gdm &&
+systemctl enable sddm &&
 systemctl enable dnsmasq &&
 systemctl enable sshd &&
 systemctl enable update.timer &&
