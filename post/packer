@@ -1,9 +1,8 @@
-DISTRO_INSTALLATION_PACKAGE="wireless-regdb 
+DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     mkinitcpio 
     base-devel 
     mesa 
     kitty 
-    lib32-mesa 
     sof-firmware 
     linux-firmware
     openssh 
@@ -14,11 +13,7 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb
     weston 
     neovim 
     dolphin 
-    gamescope 
-    gamemode 
-    xorg-server 
     pipewire 
-    lib32-pipewire 
     pipewire-alsa 
     pipewire-jack 
     pipewire-pulse 
@@ -31,15 +26,8 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb
     flatpak 
     discover 
     fuse 
-    umu-launcher 
     btop 
     sddm 
-    steam 
-    dolphin-emu 
     firefox 
-    kwallet 
-    plasma-nm 
-    plasma 
-    kwalletmanager 
     aria2
     konsole"
