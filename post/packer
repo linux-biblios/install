@@ -41,5 +41,4 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     btop 
     sddm 
     firefox 
-    aria2
-    konsole"
+    aria2"
