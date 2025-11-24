@@ -40,10 +40,9 @@ systemctl enable sshd &&
 systemctl enable update.timer &&
 systemctl enable firewalld &&
 systemctl enable NetworkManager &&
-systemctl enable --global gcr-ssh-agent.socket
 systemctl enable --global pipewire-pulse &&
 systemctl enable systemd-timesyncd.service &&
-
+systemctl enable --global gcr-ssh-agent.socket &&
 
 ## EXECUTE
 chmod +x /usr/xbin/* &&
