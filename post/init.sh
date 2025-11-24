@@ -27,8 +27,10 @@ locale-gen &&
 ## BOOTUPS
 mkdir -p /boot/{efi,kernel,loader} &&
 mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
+mv /boot/vmlinuz-linux-lts /boot/kernel/ &&
 mv /boot/*-ucode.img /boot/kernel/ &&
 rm /etc/mkinitcpio.conf &&
+mv -fr /boot/initramfs-* &&
 rm -fr /etc/mkinitcpio.conf.d/ &&
 
 
