@@ -34,12 +34,13 @@ rm -fr /etc/mkinitcpio.conf.d/ &&
 
 ##
 ## SERVICE
-systemctl enable sddm &&
+systemctl enable gdm &&
 systemctl enable dnsmasq &&
 systemctl enable sshd &&
 systemctl enable update.timer &&
 systemctl enable firewalld &&
 systemctl enable NetworkManager &&
+systemctl enable --global gcr-ssh-agent.socket
 systemctl enable --global pipewire-pulse &&
 systemctl enable systemd-timesyncd.service &&
 
