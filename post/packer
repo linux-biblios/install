@@ -1,10 +1,5 @@
 DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     cosmic
-    cosmic-text-editor
-    cosmic-files
-    cosmic-terminal
-    cosmic-wallpapers
-    cosmic-player
     cosmic-comp
     cosmic-applets 
     cosmic-app-library
