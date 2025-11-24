@@ -1,8 +1,21 @@
 DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
+    cosmic
+    cosmic-text-editor
+    cosmic-files
+    cosmic-terminal
+    cosmic-wallpapers
+    cosmic-player
+    cosmic-comp
+    cosmic-applets 
+    cosmic-app-library
+    cosmic-bg
+    cosmic-icon-theme    
+    cosmic-launcher
+    cosmic-notifications
+    gnome-keyring
     mkinitcpio 
     base-devel 
     mesa 
-    kitty 
     sof-firmware 
     linux-firmware
     openssh 
@@ -12,7 +25,6 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     networkmanager 
     weston 
     neovim 
-    dolphin 
     pipewire 
     pipewire-alsa 
     pipewire-jack 
