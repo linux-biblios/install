@@ -36,7 +36,6 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     wget 
     unzip 
     flatpak 
-    discover 
     fuse 
     btop 
     sddm
