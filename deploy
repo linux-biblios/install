@@ -1,2 +1,2 @@
 #!/bin/bash
-scp distrib/* yurosmain@frs.sourceforge.net:/home/frs/project/biblios/release-alpha-01
+scp distrib/* yurosmain@frs.sourceforge.net:/home/frs/project/libraos/release-alpha-01
