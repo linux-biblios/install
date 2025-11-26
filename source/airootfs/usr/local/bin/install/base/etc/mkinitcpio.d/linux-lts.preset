@@ -1,0 +1,23 @@
+# BIBLIOS OS IMAGE PRESET
+# mkinitcpio preset file for the 'linux-lts' package
+
+
+ALL_kver="/boot/kernel/vmlinuz-linux-lts"
+ALL_config="/etc/mkinitcpio.d/default.conf"
+ALL_kerneldest="/boot/kernel/vmlinuz-linux-lts"
+
+
+PRESETS=('default')
+#PRESETS=('default' 'fallback')
+
+
+#default_config="/etc/mkinitcpio.conf"
+#default_image="/boot/creamie.img"
+default_uki="/boot/efi/linux/creamie.efi"
+#default_options="--splash /usr/share/systemd/bootctl/creamie.bmp"
+
+
+#fallback_config="/etc/mkinitcpio.conf"
+#fallback_image="/boot/creamie-fallback.img"
+#fallback_uki="/efi/EFI/Linux/creamie.efi"
+#fallback_options="-S autodetect"
