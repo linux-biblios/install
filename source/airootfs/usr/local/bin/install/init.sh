@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 source /post/config
 
 

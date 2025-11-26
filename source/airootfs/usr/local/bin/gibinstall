@@ -45,14 +45,14 @@ graphidven=$(lspci | grep -i --color 'vga\')
 
 if [[ ! -z $(echo $graphidven | grep -i --color 'Intel Corporation') ]];then
     pacstrap /mnt vulkan-intel &&
-    echo "radeon graphic installed"
+    echo "intel graphic installed"
 fi
 
-if [[ ! -z $(lspci | grep -i --color '3d\|NVIDIA') ]];then
+if [[ ! -z $(echo $graphidven | grep -i --color '3d\|NVIDIA') ]];then
     echo "graphic nvidia"
 fi
 
-if [[ ! -z $(lspci | grep -i --color '3d\|RADEON') ]];then
+if [[ ! -z $(echo $graphidven | grep -i --color '3d\|RADEON') ]];then
     pacstrap /mnt vulkan-radeon &&
     echo "radeon graphic installed"
 fi
@@ -64,8 +64,4 @@ cp -fr /usr/local/bin/install/ /mnt/post &&
 
 
 # ARCHCHROOT
-arch-chroot /mnt /bin/bash /post/init.sh &&
-
-
-# FINISHING
-rm -fr /mnt/post && sleep 2 && umount -R /mnt && reboot
+arch-chroot /mnt /bin/bash /post/init.sh
