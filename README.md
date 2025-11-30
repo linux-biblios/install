@@ -32,3 +32,12 @@ Installation scripts for Shelver OS
 | 3   | []()  | gdm                          |
 | 4   | []()  | plymouth                          |
 | 5   | []()  | grub theme                          |        
+
+## packages remove
+| no  | name       | 
+| --- | ---------- | 
+| 1   | avahi ssh server browser           | 
+| 2   | avahi vnc server browser           |
+| 3   | qt v4l2 test utility               |
+| 4   | qt v4l2 video capture utility      |
+| 5   | avahi zeroconf browser             |
