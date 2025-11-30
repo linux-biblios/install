@@ -4,7 +4,7 @@ Installation scripts for Shelver OS
 ## System Information
 | no  | name       | functionality                                                        | type    |
 | --- | ---------- | -------------------------------------------------------------------- | ------- |
-| 1   | linux-lqx      | kernel                                                           | aur     |
+| 1   | linux-lts      | kernel                                                           | core    |
 | 2   | cosmic         | desktop environtment                                             | extra   |
 | 3   | wps-office     | office productivity suite                                        | extra   |
 | 4   | cups           | open source printing system                                      | extra   |
