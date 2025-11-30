@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source /install/post/config
-source /install/post/packer
-source /install/post/inform
+source /installer/script/post/config
+source /installer/script/post/packer
+source /installer/script/post/inform
 
 echo $DISKPROC;
 echo $DISKDATA;
