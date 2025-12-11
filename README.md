@@ -18,10 +18,9 @@ Installation scripts for Shelver OS
 | 12  | firefox        | web browser                                                      | extra   |
 | 13  | drupal         | content management system                                        | extra   |
 | 14  | wordpress      | content management system                                        | web app |
-| 15  | arteri         | system automation archive                                        | web app |
-| 16  | mediawiki      | manage network traffic rules                                     | web app |
-| 17  | OJS            | open journal system                                              | web app |
-| 18  | eprints        | digital repository                                               | web app |
+| 15  | mediawiki      | manage network traffic rules                                     | web app |
+| 16  | OJS            | open journal system                                              | web app |
+| 17  | eprints        | digital repository                                               | web app |
 
 
 ## Appearance Information
